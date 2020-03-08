@@ -1,0 +1,12 @@
+goos: windows
+goarch: amd64
+BenchmarkPad       	89478446	        13.5 ns/op
+BenchmarkPad-2     	35056761	        32.4 ns/op
+BenchmarkPad-4     	41921542	        25.6 ns/op
+BenchmarkPad-8     	40855096	        26.8 ns/op
+BenchmarkNoPad     	90115528	        13.3 ns/op
+BenchmarkNoPad-2   	24092563	        49.6 ns/op
+BenchmarkNoPad-4   	20330884	        59.2 ns/op
+BenchmarkNoPad-8   	20054715	        59.8 ns/op
+PASS
+ok  	command-line-arguments	11.402s
