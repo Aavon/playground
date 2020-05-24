@@ -53,3 +53,29 @@ func BenchmarkNoPad(b *testing.B) {
 		}
 	})
 }
+
+
+// go test -bench=Line
+// 批量更新缓存行的效率明显高于非缓存行
+var data = [128][128]int{}
+
+func BenchmarkCacheLine(b *testing.B) {
+	for n:=0; n < b.N; n++ {
+		for i:=0; i<128; i++ {
+			for j:=0; j<128; j++ {
+				data[i][j] = 1
+			}
+		}
+	}
+}
+
+func BenchmarkCacheNoLine(b *testing.B) {
+	for n:=0; n < b.N; n++ {
+		for i:=0; i<128; i++ {
+			for j:=0; j<128; j++ {
+				data[j][i] = 1
+			}
+		}
+	}
+}
+

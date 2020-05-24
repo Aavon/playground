@@ -1,0 +1,8 @@
+8 32
+goos: darwin
+goarch: amd64
+pkg: github.com/Aavon/playground/20200308/cache
+BenchmarkCacheLine-8     	   93439	     12733 ns/op
+BenchmarkCacheNoLine-8   	   23745	     50669 ns/op
+PASS
+ok  	github.com/Aavon/playground/20200308/cache	3.042s
