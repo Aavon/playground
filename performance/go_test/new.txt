@@ -1,0 +1,15 @@
+goos: darwin
+goarch: amd64
+pkg: github.com/Aavon/playground/performance/go_test
+Benchmark_case2-8   	35042865	        31.8 ns/op
+Benchmark_case2-8   	37713877	        31.9 ns/op
+Benchmark_case2-8   	36982287	        34.1 ns/op
+Benchmark_case2-8   	34615471	        32.3 ns/op
+Benchmark_case2-8   	36952094	        32.2 ns/op
+Benchmark_case2-8   	37956235	        32.4 ns/op
+Benchmark_case2-8   	37416486	        32.3 ns/op
+Benchmark_case2-8   	37743963	        32.3 ns/op
+Benchmark_case2-8   	37221094	        32.0 ns/op
+Benchmark_case2-8   	38070134	        32.0 ns/op
+PASS
+ok  	github.com/Aavon/playground/performance/go_test	12.307s
