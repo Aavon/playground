@@ -5,6 +5,7 @@ import (
 	"os"
 	"syscall"
 	"testing"
+	"unsafe"
 )
 
 // unix
@@ -20,10 +21,10 @@ func Test_mmap(t *testing.T) {
 	}
 
 	// 指定文件大小
-	err = fd.Truncate(defaultFileSize)
-	if err != nil {
-		panic(err)
-	}
+	//err = fd.Truncate(defaultFileSize)
+	//if err != nil {
+	//	panic(err)
+	//}
 
 	mbuf, err := syscall.Mmap(int(fd.Fd()), 0, int(defaultFileSize), syscall.PROT_READ|syscall.PROT_WRITE, syscall.MAP_SHARED)
 	if err != nil {
@@ -31,6 +32,12 @@ func Test_mmap(t *testing.T) {
 	}
 
 	fmt.Println(len(mbuf))
+
+	_, _, nerr := syscall.Syscall(syscall.SYS_MADVISE, uintptr(unsafe.Pointer(&mbuf[0])), uintptr(len(mbuf)), uintptr(syscall.MADV_RANDOM))
+	if nerr != 0 {
+		panic(nerr)
+	}
+
 	data := []byte("abcdef")
 	copy(mbuf, data)
 	data[0] = '@'

@@ -1,5 +1,22 @@
+# github.com/DavidBelicza/TextRank v2.1.1+incompatible
+github.com/DavidBelicza/TextRank
+github.com/DavidBelicza/TextRank/convert
+github.com/DavidBelicza/TextRank/parse
+github.com/DavidBelicza/TextRank/rank
 # github.com/boltdb/bolt v1.3.1
 github.com/boltdb/bolt
+# github.com/golang/leveldb v0.0.0-20170107010102-259d9253d719
+github.com/golang/leveldb
+github.com/golang/leveldb/crc
+github.com/golang/leveldb/db
+github.com/golang/leveldb/memdb
+github.com/golang/leveldb/record
+github.com/golang/leveldb/table
+# github.com/golang/snappy v0.0.1
+github.com/golang/snappy
+# go.uber.org/ratelimit v0.1.0
+go.uber.org/ratelimit
+go.uber.org/ratelimit/internal/clock
 # golang.org/x/sys v0.0.0-20200819035508-9a32b3aa38f5
 golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix
