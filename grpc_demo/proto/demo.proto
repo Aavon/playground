@@ -11,7 +11,9 @@ message HelloResponse {
 }
 
 service Demo {
-    rpc Hello(HelloRequest) returns (HelloResponse) {}
+    rpc Hello(HelloRequest) returns (HelloResponse) {};
+    rpc Channel (stream HelloRequest) returns (stream HelloResponse);
+    rpc Pull (HelloRequest) returns (stream HelloResponse);
 }
 
 
